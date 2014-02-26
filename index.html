@@ -19,8 +19,10 @@
 			$('#img').css('-webkit-transform','rotate('+offsetDeg+'deg)');
 			console.log('Rotating by '+offsetDeg+' degrees!');
 		}
-
-		var timer = setInterval(updateRotation(),10000);
+		$.ready(init());
+		function init(){
+			var timer = setInterval(updateRotation(),10000);
+		}
 
 	</script>
 </head>
