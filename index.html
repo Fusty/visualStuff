@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adjusted XKCD Now -> Here</title>
+    <script type="text/javascript">
+        document.write("\<script src='https://code.jquery.com/jquery-latest.min.js' type='text/javascript'>\<\/script>");
+    </script>
+
+	<script>
+
+		function updateRotation(){
+			var hour = getHours();
+
+			var offsetHour = 12-hour;
+
+			var offsetDeg = 15*offsetHour;
+
+			$('#img').css('-webkit-transform','rotate('+offsetDeg+'deg)');
+		}
+
+		updateRotation();
+		var timer = setInterval(updateRotation(),10000);
+
+	</script>
+</head>
+<body>
+
+<div class="imgDiv">
+	<img src="http://c.xkcd.com/redirect/comic/now" id="img"/>
+</div>
+
+</body>
+</html>
