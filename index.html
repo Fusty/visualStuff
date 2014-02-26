@@ -21,9 +21,12 @@
 			
 			console.log('Rotating by '+offsetDeg+' degrees!');
 		}
-		$.ready(function(){
+
+		$.ready(init());
+
+		function init(){
 			var timer = setInterval(updateRotation,10000);
-		});
+		}
 
 	</script>
 </head>
