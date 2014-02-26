@@ -22,7 +22,7 @@
 			console.log('Rotating by '+offsetDeg+' degrees!');
 		}
 
-		$.ready(init());
+		//$.ready(init());
 
 		function init(){
 			var timer = setInterval(updateRotation,10000);
@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<div class="imgDiv">
+<div class="imgDiv" onload="init()">
 	<img src="http://c.xkcd.com/redirect/comic/now" id="img"/>
 </div>
 
