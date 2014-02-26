@@ -17,7 +17,7 @@
 			var offsetDeg = 15*offsetHour;
 
 			//$('#img').css('-webkit-transform','rotate('+offsetDeg+'deg)');
-			$('.imgDiv').load('http://xkcd.com/now #comic_now');
+			$('#img').attr('src','http://c.xkcd.com/redirect/comic/now?'+date.getTime());
 			$('#img').css('-webkit-transform','rotate(20deg)');
 			
 			console.log('Rotating by '+offsetDeg+' degrees!');
