@@ -9,6 +9,7 @@
 	<script>
 
 		function updateRotation(){
+			console.log('Updating!');
 			var date = new Date();
 			var hour = date.getHours();
 
@@ -20,6 +21,7 @@
 		}
 
 		updateRotation();
+
 		var timer = setInterval(updateRotation(),10000);
 
 	</script>
