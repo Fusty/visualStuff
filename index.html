@@ -12,7 +12,7 @@
 			var date = new Date();
 			var hour = date.getHours();
 
-			var offsetHour = 12-hour+((date.getMinutes()+1)/60);
+			var offsetHour = 12-(hour+((date.getMinutes()+1)/60));
 
 			var offsetDeg = 15*offsetHour;
 
