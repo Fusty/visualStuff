@@ -16,6 +16,10 @@
 
 			var offsetDeg = 15*offsetHour;
 
+			if(offsetDeg < 0){
+				offsetDeg = 360 + offsetDeg;
+			}
+
 			//$('#img').css('-webkit-transform','rotate('+offsetDeg+'deg)');
 			$('#img').attr('src','http://c.xkcd.com/redirect/comic/now?'+date.getTime());
 			$('#img').css('-webkit-transform','rotate(20deg)');
