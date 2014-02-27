@@ -26,12 +26,10 @@
 			console.log(offsetHour);
 		}
 
-		$.ready(init());
+		$(document).ready(init());
 
 		function init(){
-			alert('hey')
 			updateRotation;
-			alert('hey')
 			var timer = setInterval(updateRotation,20000);
 		}
 
