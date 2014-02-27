@@ -9,7 +9,6 @@
 	<script>
 
 		function updateRotation(){
-			alert('hey');
 			var date = new Date();
 			var hour = date.getHours();
 
@@ -30,7 +29,7 @@
 		$('#img').ready(init());
 
 		function init(){
-			updateRotation;
+			updateRotation();
 			var timer = setInterval(updateRotation,20000);
 		}
 
