@@ -43,7 +43,7 @@
 
 		img {
 			position:absolute;
-			mask: url(#mask);
+			mask: url(#masking);
 		}
 	</style>
 </head>
@@ -60,9 +60,10 @@
 </div>
 <svg>
   <defs>
-    <clipPath id="mask">
-      <circle cx="284" cy="213" r="213" />
-    </clipPath>
+    <mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+      <rect y="0.3" width="1" height=".7" fill="black" />
+      <circle cx=".5" cy=".5" r=".35" fill="white" />
+    </mask>
   </defs>
 </svg>
 </body>
