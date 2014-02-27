@@ -26,10 +26,10 @@
 			console.log(offsetHour);
 		}
 
-		$.ready(init());
+		$('#img').ready(init());
 
 		function init(){
-			updateRotation;
+			updateRotation();
 			var timer = setInterval(updateRotation,20000);
 		}
 
