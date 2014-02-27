@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adjusted XKCD Now -> Here</title>
+    <script type="text/javascript">
+        document.write("\<script src='//code.jquery.com/jquery-latest.min.js' type='text/javascript'>\<\/script>");
+    </script>
+    <script type="text/javascript">
+        document.write("\<script src='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css' type='text/javascript'>\<\/script>");
+    </script>
+	<script>
+
+		function updateRotation(){
+			var date = new Date();
+			var hour = date.getHours();
+
+			var offsetHour = 12-(hour+((date.getMinutes()+1+((date.getSeconds()+1)/60))/60));
+
+			var offsetDeg = 15*offsetHour;
+
+			//$('#img').css('-webkit-transform','rotate('+offsetDeg+'deg)');
+			$('#img').attr('src','http://c.xkcd.com/redirect/comic/now?'+date.getTime());
+			$('#img').css('transform','rotate('+offsetDeg+'deg)');
+			$('#img').css('-ms-transform','rotate('+offsetDeg+'deg)');
+			$('#img').css('-webkit-transform','rotate('+offsetDeg+'deg)');
+			
+			console.log('Rotating by '+offsetDeg+' degrees!');
+			console.log(offsetHour);
+		}
+
+		$.ready(init());
+
+		function init(){
+			updateRotation;
+			var timer = setInterval(updateRotation,2000);
+		}
+
+	</script>
+
+	<style>
+		body {background-color:#96A8C8;}
+	</style>
+</head>
+<body>
+
+<div class="imgDiv row" >
+	<div class="col-xs-6">
+		<img style="z-index:0;position:relative;" src="http://c.xkcd.com/redirect/comic/now" id="img"/>
+	</div>
+</div>
+<br/>
+<div class="messageDiv" style="z-index:0;position:relative;">
+	Synced with local time.  <a href="http://xkcd.com/now">Wondeful comic by XKCD, used here without any permission, but I'm linking to your site and this is for fun.</a>
+</div>
+</body>
+</html>
