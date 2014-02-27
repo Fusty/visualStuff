@@ -30,7 +30,7 @@
 
 		function init(){
 			updateRotation;
-			var timer = setInterval(updateRotation,2000);
+			var timer = setInterval(updateRotation,20000);
 		}
 
 	</script>
@@ -54,7 +54,7 @@
 <body>
 	<div class="row" >
 		<div class="col-md-6" id="imgDiv" style="min-width:625px;">
-			<img src="http://c.xkcd.com/redirect/comic/now" id="img"/>
+			<img src="http://c.xkcd.com/redirect/comic/now" id="img" onload="updateRotation();"/>
 		</div>
 		<div class="well col-md-3 pull-right" style="margin-top:10%;margin-right:50px!important;">
 			Synced with local time.  <br/><a href="http://xkcd.com/now">Wondeful comic by XKCD</a>, used here without any permission, but I'm <a href="http://xkcd.com/now">linking to Randall's site and this is for fun.</a>
