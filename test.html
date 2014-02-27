@@ -24,6 +24,8 @@
 			
 			console.log('Rotating by '+offsetDeg+' degrees!');
 			console.log(offsetHour);
+			
+			$('#time').text((hour+1)+":"+date.getMinutes());
 		}
 
 		$('#img').ready(init());
