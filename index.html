@@ -24,12 +24,16 @@
 			
 			console.log('Rotating by '+offsetDeg+' degrees!');
 			console.log(offsetHour);
+			
+			$('#time').text(date.toTimeString());
+			console.log($('#time'));
+			console.log(date.toTimeString());
 		}
 
-		$('#img').ready(init());
+		$('#time').ready(init());
 
 		function init(){
-			updateRotation();
+			setTimeout(updateRotation,1000);
 			var timer = setInterval(updateRotation,20000);
 		}
 
@@ -45,6 +49,7 @@
 			-webkit-border-radius:50%;
 			-khtml-border-radius:50%;
 			border-radius: 50%;
+			position:absolute;
 		}
 
 	</style>
@@ -52,9 +57,14 @@
 
 </head>
 <body>
+	<div class="row" style="height:50px;">
+		<div id="time" class="col-md-6" style="margin-left:2em;font-size:2em;font-weight:bold;margin-top:20px;text-align:center;height:50px;min-width:625px;">
+		</div>
+	</div>
 	<div class="row" >
-		<div class="col-md-6" id="imgDiv" style="min-width:625px;">
-			<img src="http://c.xkcd.com/redirect/comic/now" id="img"/>
+		<div class="col-md-6" id="imgDiv" style="min-width:625px;min-height:625px;">
+			<img src="http://c.xkcd.com/redirect/comic/now" id="img" />
+			<img src="timeLine.png" id="img" />
 		</div>
 		<div class="well col-md-3 pull-right" style="margin-top:10%;margin-right:50px!important;">
 			Synced with local time.  <br/><a href="http://xkcd.com/now">Wondeful comic by XKCD</a>, used here without any permission, but I'm <a href="http://xkcd.com/now">linking to Randall's site and this is for fun.</a>
