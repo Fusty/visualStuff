@@ -42,7 +42,10 @@
 		}
 
 		img {
-			mask: url(#masking);
+			-moz-border-radius: 25%;
+			-webkit-border-radius:25%;
+			-khtml-border-radius:25%;
+			border-radius: 25%;
 		}
 	</style>
 </head>
@@ -57,13 +60,6 @@
 <div class="messageDiv" style="z-index:0;position:relative;">
 	Synced with local time.  <a href="http://xkcd.com/now">Wondeful comic by XKCD, used here without any permission, but I'm linking to your site and this is for fun.</a>
 </div>
-<svg>
-  <defs>
-    <mask id="masking" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
-      <rect y="0.3" width="1" height=".7" fill="black" />
-      <circle cx=".5" cy=".5" r=".35" fill="white" />
-    </mask>
-  </defs>
-</svg>
+
 </body>
 </html>
