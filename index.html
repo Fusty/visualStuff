@@ -3,9 +3,9 @@
 <head>
 	<title>Adjusted XKCD Now -> Here</title>
     <script type="text/javascript">
-        document.write("\<script src='https://code.jquery.com/jquery-latest.min.js' type='text/javascript'>\<\/script>");
+        document.write("\<script src='//code.jquery.com/jquery-latest.min.js' type='text/javascript'>\<\/script>");
     </script>
-
+	<link rel="StyleSheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" />
 	<script>
 
 		function updateRotation(){
@@ -34,15 +34,29 @@
 		}
 
 	</script>
+
+	<style>
+		body {
+			background-color:#96A8C8;
+		}
+
+		img {
+			-moz-border-radius: 50%;
+			-webkit-border-radius:50%;
+			-khtml-border-radius:50%;
+			border-radius: 50%;
+		}
+
+	</style>
 </head>
 <body>
-
-<div class="imgDiv" >
-	<img style="z-index:0;position:relative;" src="http://c.xkcd.com/redirect/comic/now" id="img"/>
-</div>
-<br/>
-<div class="messageDiv" style="z-index:0;position:relative;">
-	Synced with local time.  <a href="http://xkcd.com/now">Wondeful comic by XKCD, used here without any permission, but I'm linking to your site and this is for fun.</a>
-</div>
+	<div class="row" >
+		<div class="col-md-6" id="imgDiv" style="min-width:625px;">
+			<img src="http://c.xkcd.com/redirect/comic/now" id="img"/>
+		</div>
+		<div class="well col-md-3 pull-right" style="margin-top:10%;margin-right:20px!important;">
+			Synced with local time.  <br/><a href="http://xkcd.com/now">Wondeful comic by XKCD</a>, used here without any permission, but I'm <a href="http://xkcd.com/now">linking to Randall's site and this is for fun.</a>
+		</div>
+	</div>
 </body>
 </html>
