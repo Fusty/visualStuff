@@ -125,31 +125,32 @@
 					<h3>JavaScript</h3>
 					<pre class="prettyprint">
 $('.neonDiv').hover(function(){
-	//Mouse in
-	window.flicker = true;
-	flick();
+  //Mouse in
+  window.flicker = true;
+  flick();
 }, function(){
-	//Mouse out
-	window.flicker = false;
+  //Mouse out
+  window.flicker = false;
 });
 
 function flick(){
-	if(window.flicker){
-		//get a couple flicker duractions to choose from so it's more flickery
-		longFlick = Math.floor((Math.random()*800)+20)/2;
-		shortFlick = Math.floor((Math.random()*100)+1)/2;
+  if(window.flicker){
 
-		rand = Math.random();
-		setTimeout(function(){
-			rand = Math.random();
-			$('.breakMe').addClass('broken');
-			setTimeout(function(){
-				$('.breakMe').removeClass('broken');
-				flick();
-			},rand > .5 ? longFlick : shortFlick);
-		},rand > .5 ? longFlick : shortFlick);
+  //get a couple flicker duractions to choose from so it's more flickery
+  longFlick = Math.floor((Math.random()*800)+20)/2;
+  shortFlick = Math.floor((Math.random()*100)+1)/2;
 
-	}
+  rand = Math.random();
+    setTimeout(function(){
+      rand = Math.random();
+      $('.breakMe').addClass('broken');
+      setTimeout(function(){
+        $('.breakMe').removeClass('broken');
+        flick();
+      },rand > .5 ? longFlick : shortFlick);
+    },rand > .5 ? longFlick : shortFlick);
+  
+  }
 }
 					</pre>
 				</div>
@@ -159,56 +160,55 @@ function flick(){
 					<h3>CSS</h3>
 					<pre class="prettyprint">
 .neonDiv {
-	margin-top:1.5em;
+  margin-top:1.5em;
 
-	padding: 20px;
+  padding: 20px;
 
-	font: normal normal normal 60px/1 "Dosis", Helvetica, sans-serif;
+  font: normal normal normal 60px/1 "Dosis", Helvetica, sans-serif;
 
-	color: rgba(255,255,255,1);
+  color: rgba(255,255,255,1);
 
-	text-align: center;
-	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis;
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
 .neon {
-	text-shadow: 
-		0 0 10px rgb(255,255,255),
-		0 0 20px rgb(255,255,255),
-		0 0 30px rgb(255,255,255),
-		0 0 40px rgb(255,17,119),
-		0 0 70px rgb(255,17,119),
-		0 0 80px rgb(255,17,119),
-		0 0 100px rgb(255,17,119),
-		0 0 150px rgb(255,17,119);
+  text-shadow: 
+    0 0 10px rgb(255,255,255),
+    0 0 20px rgb(255,255,255),
+    0 0 30px rgb(255,255,255),
+    0 0 40px rgb(255,17,119),
+    0 0 70px rgb(255,17,119),
+    0 0 80px rgb(255,17,119),
+    0 0 100px rgb(255,17,119),
+    0 0 150px rgb(255,17,119);
 
-	-webkit-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
-	-moz-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
-	-o-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
-	transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
-
+  -webkit-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
 }
 
 .neon:hover {
-	text-shadow: 
-		0 0 5px rgb(255,255,255),
-		0 0 10px rgb(255,255,255),
-		0 0 15px rgb(255,255,255),
-		0 0 20px rgb(255,17,119),
-		0 0 35px rgb(255,17,119),
-		0 0 40px rgb(255,17,119),
-		0 0 50px rgb(255,17,119),
-		0 0 75px rgb(255,17,119);
+  text-shadow: 
+    0 0 5px rgb(255,255,255),
+    0 0 10px rgb(255,255,255),
+    0 0 15px rgb(255,255,255),
+    0 0 20px rgb(255,17,119),
+    0 0 35px rgb(255,17,119),
+    0 0 40px rgb(255,17,119),
+    0 0 50px rgb(255,17,119),
+    0 0 75px rgb(255,17,119);
 }
 
 .broken {
-	color:#444;
-	text-shadow:0 0 0px rgb(255,255,255);
+  color:#444;
+  text-shadow:0 0 0px rgb(255,255,255);
 
-	-webkit-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
-	-moz-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
-	-o-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
-	transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  -webkit-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  -moz-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  -o-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+  transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
 }
 					</pre>
 				</div>
