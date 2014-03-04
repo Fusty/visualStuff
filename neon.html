@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neon Demo</title>
+    <script type="text/javascript">
+        document.write("\<script src='//code.jquery.com/jquery-latest.min.js' type='text/javascript'>\<\/script>");
+    </script>
+	<link async href="http://fonts.googleapis.com/css?family=Dosis" data-generated="http://sinister.uakron.edu" rel="stylesheet" type="text/css"/>
+	<link rel="StyleSheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" />
+
+	<script>
+	</script>
+
+	<style>
+		body {
+			background-color:#222;
+			color:#fff;
+		}
+
+		.neonDiv {
+			margin-top:1.5em;
+
+			padding: 20px;
+
+			font: normal normal normal 60px/1 "Dosis", Helvetica, sans-serif;
+
+			color: rgba(255,255,255,1);
+
+			text-align: center;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+		}
+		.neon {
+			text-shadow: 
+				0 0 10px rgb(255,255,255),
+				0 0 20px rgb(255,255,255),
+				0 0 30px rgb(255,255,255),
+				0 0 40px rgb(255,17,119),
+				0 0 70px rgb(255,17,119),
+				0 0 80px rgb(255,17,119),
+				0 0 100px rgb(255,17,119),
+				0 0 150px rgb(255,17,119);
+
+			-webkit-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+			-moz-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+			-o-transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+			transition: all 200ms cubic-bezier(0.42,0,0.58,1) 10ms;
+
+		}
+
+		.neon:hover {
+			text-shadow: 
+				0 0 5px rgb(255,255,255),
+				0 0 10px rgb(255,255,255),
+				0 0 15px rgb(255,255,255),
+				0 0 20px rgb(255,17,119),
+				0 0 35px rgb(255,17,119),
+				0 0 40px rgb(255,17,119),
+				0 0 50px rgb(255,17,119),
+				0 0 75px rgb(255,17,119);
+		}
+
+		.broken {
+			color:#444;
+			text-shadow:0 0 0px rgb(255,255,255);
+
+			-webkit-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+			-moz-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+			-o-transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+			transition: all 10ms cubic-bezier(0.42,0,0.58,1) 10ms;
+		}
+
+
+	</style>
+	<meta property="og:image"content="http://c.xkcd.com/redirect/comic/now" />
+
+</head>
+<body>
+	<div class="row" >
+		<div  class="col-md-6 col-md-offset-3 neonDiv neon">
+			<span class="">F</span>
+			<span class="">o</span>
+			<span class="breakMe">u</span>
+			<span class="">n</span>
+			<span class="">d</span>
+			<span class="">a</span>
+			<span class="">t</span>
+			<span class="breakMe">i</span>
+			<span class="breakMe">o</span>
+			<span class="breakMe">n</span>
+
+		</div>
+	</div>
+</body>
+</html>
+<script>
+
+$('.neonDiv').hover(function(){
+	//Mouse in
+	initFlicker();
+}, function(){
+	//Mouse out
+	killFlicker();
+});
+
+
+function initFlicker(){
+	window.flicker = true;
+
+	flick();
+}
+
+function flick(){
+	if(window.flicker){
+		longFlick = Math.floor((Math.random()*800)+20)/2;
+		shortFlick = Math.floor((Math.random()*100)+1)/2;
+
+		rand = Math.random();
+		setTimeout(function(){
+			rand = Math.random();
+			$('.breakMe').addClass('broken');
+			setTimeout(function(){
+				$('.breakMe').removeClass('broken');
+				flick();
+			},rand > .5 ? longFlick : shortFlick);
+		},rand > .5 ? longFlick : shortFlick);
+
+	}
+}
+
+function killFlicker(){
+	window.flicker = false;
+}
+</script>
