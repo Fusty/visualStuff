@@ -167,15 +167,33 @@
                         <script>
                             var doughnutData = [
                                     {
-                                        value: 90,
+                                        value: 95,
                                         color:"#04B45F"
                                     },
                                     {
-                                        value : 10,
+                                        value : 5,
                                         color : "#1C1C1C"
                                     }
                                 ];
                                 var myDoughnut = new Chart(document.getElementById("javascript").getContext("2d")).Doughnut(doughnutData);
+                        </script>
+                    </div>
+                    <div class="col-lg-3 centered">
+                        <canvas id="jQuery" height="130" width="130"></canvas>
+                        <p>jQuery</p>
+                        <br>
+                        <script>
+                            var doughnutData = [
+                                    {
+                                        value: 95,
+                                        color:"#04B45F"
+                                    },
+                                    {
+                                        value : 5,
+                                        color : "#1C1C1C"
+                                    }
+                                ];
+                                var myDoughnut = new Chart(document.getElementById("jQuery").getContext("2d")).Doughnut(doughnutData);
                         </script>
                     </div>
                     <div class="col-lg-3 centered">
@@ -221,11 +239,11 @@
                         <script>
                             var doughnutData = [
                                     {
-                                        value: 80,
+                                        value: 90,
                                         color:"#04B45F"
                                     },
                                     {
-                                        value : 20,
+                                        value : 10,
                                         color : "#1C1C1C"
                                     }
                                 ];
